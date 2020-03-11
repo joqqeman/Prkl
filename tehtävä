@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class PositiivistenLukujenKeskiarvo {
+
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
+        int maara = 0;
+        int summa = 0;
+            
+        while (true) {
+            
+            int luku = Integer.valueOf(lukija.nextLine());
+            
+            if (luku > 0) {
+                maara++;
+                summa = summa + luku;
+                continue;
+            }
+            if (luku == 0) {
+                break;
+            }   
+        }
+        if (maara > 0) {
+            System.out.println(summa / maara);
+        }
+        else {
+            System.out.println("keskiarvon laskeminen ei ole mahdollista");
+        }
+    } 
+}
+
